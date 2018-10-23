@@ -1,0 +1,79 @@
+﻿  texture.cpp
+  system_timer.cpp
+  sprite.cpp
+  player.cpp
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\player.cpp(317): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\player.cpp(323): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  mydirect3d.cpp
+  main.cpp
+  light.cpp
+  joycon.cpp
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(96): warning C4996: 'strerror': This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(178): note: 'strerror' の宣言を確認してください
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(156): warning C4838: 'int' から 'uint8_t' への変換には縮小変換が必要です
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(272): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(333): warning C4305: '初期化中': 'double' から 'float' へ切り詰めます。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(671): warning C4244: '=': 'float' から 'uint16_t' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(672): warning C4244: '=': 'float' から 'uint16_t' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(723): warning C4244: '=': 'const uint16_t' から 'uint8_t' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(762): warning C4244: '=': 'const uint16_t' から 'uint8_t' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1212): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1213): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1217): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1218): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1239): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1240): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1244): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1245): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1282): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1283): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1286): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1287): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1292): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1293): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1296): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1297): warning C4010: 単一行コメント (//) に、行連結文字があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1346): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1351): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1358): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1365): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1371): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1396): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1402): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1413): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\joycon.cpp(1634): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  input.cpp
+  grid.cpp
+  game.cpp
+  fade.cpp
+  explosion.cpp
+  enemy.cpp
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(116): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(121): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(327): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(347): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(350): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(353): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(356): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(369): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(376): warning C4244: '=': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(422): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(423): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(424): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(446): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(447): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(448): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(458): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(459): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(460): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(470): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(471): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(472): warning C4244: '引数': 'double' から 'float' への変換です。データが失われる可能性があります。
+c:\users\ths70146\documents\visual studio 2015\projects\prototype ver.0.6\hewandoyou\enemy.cpp(499): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  debug_font.cpp
+  cube.cpp
+  camera.cpp
+  bullet.cpp
+  コードを生成中...
+  20180523_02.vcxproj -> C:\Users\ths70146\Documents\Visual Studio 2015\Projects\prototype ver.0.6\HEWandoyou\Debug\20180523_02.exe
+  20180523_02.vcxproj -> C:\Users\ths70146\Documents\Visual Studio 2015\Projects\prototype ver.0.6\HEWandoyou\Debug\20180523_02.pdb (Full PDB)
