@@ -48,7 +48,7 @@ void Game_Initialize(void)
 // ゲームの終了処理
 void Game_Finalize(void)
 {
-	
+	Cube_Finalize();
 }
 
 // ゲームの更新
