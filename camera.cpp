@@ -125,7 +125,6 @@ void Camera_Update(void)
 		}
 	}
 
-
 	/*if (Keyboard_IsPress(DIK_W))
 	{
 		D3DXVECTOR3 f(CameraFront);

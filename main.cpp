@@ -16,6 +16,7 @@ Date   : 2018/09/05
 #include "sprite.h"
 #include "game.h"
 #include "joycon.h"
+#include "scene.h"
 
 /*------------------------------------------------------------------------------
 定数定義
@@ -235,8 +236,9 @@ bool Initialize(HINSTANCE hInstance, HWND hWnd)
 	// スプライト描画モジュールの初期化
 	Sprite_Initialize();
 
+	Scene_Init(SCENE_INDEX_TITLE);
 	// ゲームの初期化
-	Game_Initialize();
+	//Game_Initialize();
 
 	Joycon_Initialize();
 
@@ -249,8 +251,9 @@ void Update(void)
 	// キーボードモジュールの更新
 	Keyboard_Update();
 
+	Scene_Update();
 	// ゲームの更新
-	Game_Update();
+	//Game_Update();
 
 #if defined(_DEBUG) || defined(DEBUG)
 	// フレームカウントの更新
@@ -283,8 +286,9 @@ void Draw(void)
 	// 描画バッチ命令の開始
 	pDevice->BeginScene();
 
+	Scene_Draw();
 	// ゲームの描画
-	Game_Draw();
+	//Game_Draw();
 
 #if defined(_DEBUG) || defined(DEBUG)
 	// FPSのデバック表示
@@ -296,6 +300,9 @@ void Draw(void)
 
 	// バックバッファをフリップ（タイミングはD3DPRESENT_PARAMETERSの設定による）
 	pDevice->Present(NULL, NULL, NULL, NULL);
+
+	//シーンのチェック
+	Scene_Check();
 }
 
 // ゲームの終了処理
@@ -318,4 +325,6 @@ void Finalize(void)
 
 	// Direct3Dラッパーモジュールの終了処理
 	MyDirect3D_Finalize();
+
+	Scene_Fin();
 }

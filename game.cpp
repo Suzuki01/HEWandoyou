@@ -19,10 +19,11 @@ Date   : 2018/09/05
 #include "joycon.h"
 #include "fade.h"
 #include "explosion.h"
+#include "scene.h"
+#include "BossSelect.h"
 
 static bool bGameOver;
 static bool bGameWin;
-
 
 /*------------------------------------------------------------------------------
 関数定義
@@ -54,27 +55,36 @@ void Game_Finalize(void)
 // ゲームの更新
 void Game_Update(void)
 {
-	if (!bGameOver)
+
+	Camera_Update();
+	Cube_Update();
+	Enemy_Update();
+	Player_Update();
+	Bullet_Update();
+	pollLoop();
+	Explosion_Update();
+	Fade_Update();
+	
+	//playerHP =0;
+	if (Keyboard_IsTrigger(DIK_1))
 	{
-		Camera_Update();
-		Cube_Update();
-		Enemy_Update();
-		Player_Update();
-		Bullet_Update();
-		pollLoop();
-		Explosion_Update();
-		Fade_Update();
+		Scene_Change(SCENE_INDEX_CONTINUE);
+	}
+	//EnemyHp =0;
+	if (Keyboard_IsTrigger(DIK_2))
+	{
+		Scene_Change(SCENE_INDEX_ENDING);
 	}
 
 	//ゲーム終了
 	if (Player_Get_HP() == 0|| Enemy_Get_HP() == 0)
 	{
-		bGameOver = true;
+		Scene_Change(SCENE_INDEX_CONTINUE);
 	}
-	if (bGameOver&&Keyboard_IsTrigger(DIK_1))
+
+	if (Enemy_Get_HP() == 0)
 	{
-		Game_Initialize();
-		bGameOver = false;
+		Scene_Change(SCENE_INDEX_GAME);
 	}
 }
 
@@ -87,17 +97,8 @@ void Game_Draw(void)
 	Bullet_Draw();
 	Explosion_Draw();
 
-	if (bGameOver)
-	{
-		if (Player_Get_HP() == 0)
-		{
-			DebugFont_Draw(400, 200, "YOU LOSE\n1押してゲーム再開");
-		}
-		else if (Enemy_Get_HP() == 0)
-		{
-			DebugFont_Draw(400, 200, "YOU WIN\n1押してゲーム再開");
-		}
-	}
+	DebugFont_Draw(50, 100,  "1で　playerHP=0　 test");
+	DebugFont_Draw(50, 200,  "2で　EnemyHP=0    test");
 
 	Grid_Draw();
 	Fade_Draw();
