@@ -10,6 +10,7 @@ Date   : 2018/06/16
 #include "debug_printf.h"
 #include "mydirect3d.h"
 #include "texture.h"
+#include "common.h"
 
 
 /*------------------------------------------------------------------------------
@@ -47,6 +48,13 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/explo.png", 1024, 1024 },
 	{ "asset/texture/1.png", 512, 512 },
 	{ "asset/texture/2.png", 512, 512 },
+	{ "asset/texture/looptest/menu.png",SCREEN_WIDTH , SCREEN_HEIGHT},
+	{ "asset/texture/looptest/opening.png",SCREEN_WIDTH , SCREEN_HEIGHT},
+	{ "asset/texture/looptest/tutorial.png",SCREEN_WIDTH , SCREEN_HEIGHT},
+	{ "asset/texture/looptest/boss_select.png",SCREEN_WIDTH , SCREEN_HEIGHT},
+	{ "asset/texture/looptest/ranking.png",SCREEN_WIDTH , SCREEN_HEIGHT},
+	{ "asset/texture/looptest/ending.png",SCREEN_WIDTH , SCREEN_HEIGHT},
+	{ "asset/texture/looptest/continue.png",SCREEN_WIDTH , SCREEN_HEIGHT},
 };
 // 読み込みテクスチャ数
 static const int TEXTURE_FILE_COUNT = sizeof(g_TextureFiles) / sizeof(g_TextureFiles[0]);
