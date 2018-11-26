@@ -8,6 +8,10 @@
 #include "player_action.h"
 #include "judgement.h"
 #include "joycon.h"
+#include "sword_effect.h"
+#include "common.h"
+#include "sprite.h"
+#include "bill_board.h"
 
 #define PHASE_DOOR_A	(1)
 #define PHASE_BRIDGE	(2)
@@ -39,8 +43,6 @@
 #define ROTATION_SPEED	(1.0f)
 
 #define ROCK_HP			(10)
-
-
 
 static int turorial_phase;
 
@@ -86,7 +88,6 @@ void Tutorial_Initialize(void)
 	MeshField_Initialize(2.0f, 200, 200);
 	MeshSky_Initialize(5.0f, 100, 30);
 	PlayerAction_Initialize();
-
 	turorial_phase = PHASE_DOOR_A;
 
 	bTutorial_Door_A = false;
@@ -181,6 +182,7 @@ void Tutorial_Update(void)
 				bTutorial_Bridge = false;
 				bIsAttack = true;
 				PlayerAction_SetSlash(UP, false);
+				SwordEffectCreate(SCREEN_WIDTH * 0.5 - 100, SCREEN_HEIGHT * 0.5, D3DXToRadian(90), TEXTURE_INDEX_ZANSHIN, 15, 5);
 				turorial_phase = PHASE_DOOR_B;
 			}
 		}
@@ -320,6 +322,7 @@ void Tutorial_Update(void)
 			{
 				bIsWireA_Attack = true;
 				bIsAttack = true;
+				SwordEffectCreate(SCREEN_WIDTH * 0.5, SCREEN_HEIGHT * 0.5, 0, TEXTURE_INDEX_COUNTER,15,5);
 				PlayerAction_SetSlash(RIGHT, false);
 			}
 			if(bIsWireA_Attack)
@@ -354,6 +357,7 @@ void Tutorial_Update(void)
 				bIsWireB_Attack = true;
 				bIsAttack = true;
 				PlayerAction_SetSlash(LEFT, false);
+				SwordEffectCreate(SCREEN_WIDTH * 0.5, SCREEN_HEIGHT * 0.5, 0, TEXTURE_INDEX_COUNTER, 15, 5);
 			}
 			if(bIsWireB_Attack)
 			{
@@ -411,7 +415,6 @@ void Tutorial_Update(void)
 		Attack_timeCnt = 0;
 		bIsAttack = false;
 	}
-
 	Camera_Set_Pos(D3DXVECTOR3(Camera_PosX, Camera_PosY, Camera_PosZ));
 }
 void Tutorial_Draw(void)
@@ -420,7 +423,12 @@ void Tutorial_Draw(void)
 
 	MeshField_Draw(TEXTURE_INDEX_FIELD, 200, 200);
 	MeshSky_Draw(TEXTURE_INDEX_SKY, 100, 30);
-
+	if (turorial_phase == PHASE_SPEAR) {
+		Sprite_Draw(TEXTURE_INDEX_AVOIDANCE_ACTIVE, INDICATOR_POSX, INDICATOR_POSY, 0, 0, 1950, 1950, 975, 975, 0.1, 0.1, 0);
+	}
+	else {
+		Sprite_Draw(TEXTURE_INDEX_AVOIDANCE_NORMAL, INDICATOR_POSX, INDICATOR_POSY, 0, 0, 1950, 1950, 975, 975, 0.1, 0.1, 0);
+	}
 
 	//ステージ描画
 	//扉A
@@ -447,16 +455,26 @@ void Tutorial_Draw(void)
 	if (turorial_phase <= PHASE_ROCK)
 	{
 		Cube_Draw(TEXTURE_INDEX_1, ROCK_POS_X, 0.0f, ROCK_POS_Z, 1.0f, 1.0f, 1.0f);
+		if (turorial_phase == PHASE_ROCK) {
+			Sprite_Draw(TEXTURE_INDEX_ENEMY_ATTACK_GAGE,	   -300, -600, 0, 0, 1500 * (1 + (0.1 * (Rock_HP - 10))), 1500, 750, 750, 0.4, 0.4, 0);
+			Sprite_Draw(TEXTURE_INDEX_ENEMY_ATTACK_GAGE_FRAME, -300, -600, 0, 0, 1500, 1500, 750, 750, 0.4, 0.4, 0);
+		}
 	}
 	//ワイヤーA
 	if (turorial_phase <= PHASE_WIRE_A)
 	{
 		Cube_Draw(TEXTURE_INDEX_2, DOOR_C_POS_X, WIRE_POS_Y, Wire_A_PosZ, 1.0f, 1.0f, 1.0f);
+		if (turorial_phase == PHASE_WIRE_A) {
+			Sprite_Draw(TEXTURE_INDEX_COUNTER_ATTACK_RIGHT, INDICATOR_POSX, INDICATOR_POSY, 0, 0, 1950, 1950, 975, 975, 0.1, 0.1, 0);
+		}
 	}
 	//ワイヤーB
 	if (turorial_phase <= PHASE_WIRE_B)
 	{
 		Cube_Draw(TEXTURE_INDEX_2, DOOR_C_POS_X, WIRE_POS_Y, Wire_B_PosZ, 1.0f, 1.0f, 1.0f);
+		if (turorial_phase == PHASE_WIRE_B) {
+			Sprite_Draw(TEXTURE_INDEX_COUNTER_ATTACK_LEFT, INDICATOR_POSX, INDICATOR_POSY, 0, 0, 1950, 1950, 975, 975, 0.1, 0.1, 0);
+		}
 	}
 	//扉C
 	if (turorial_phase <= PHASE_DOOR_C)
@@ -465,7 +483,6 @@ void Tutorial_Draw(void)
 	}
 	//階段
 	Cube_Draw(TEXTURE_INDEX_1, STAIRS_POS_X, 0.0f, ROCK_POS_Z, 1.0f, 1.0f, 1.0f);
-
 
 	//チュートリアル
 	if (bTutorial_Door_A)

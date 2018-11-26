@@ -154,6 +154,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bill_board.cpp" />
     <ClCompile Include="bullet.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="cube.cpp" />
@@ -182,6 +183,7 @@
     <ClCompile Include="turorial.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bill_board.h" />
     <ClInclude Include="bullet.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="common.h" />

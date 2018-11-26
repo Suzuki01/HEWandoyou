@@ -23,6 +23,7 @@ typedef struct Vertex2D_tag
 	D3DXVECTOR2 texcoord;
 } Vertex2D;
 #define FVF_VERTEX2D (D3DFVF_XYZRHW|D3DFVF_DIFFUSE|D3DFVF_TEX1) // ２Dポリゴン頂点フォーマット
+#define THRESHOLD_VALUE	(10)
 
 
 /*------------------------------------------------------------------------------
@@ -211,6 +212,10 @@ void Sprite_Draw(TextureIndex texture_index, float dx, float dy, int tx, int ty,
 	pV[3].texcoord = D3DXVECTOR2(u[1], v[1]);
 
 	g_pVertexBuffer->Unlock();
+
+	pDevice->SetRenderState(D3DRS_ALPHATESTENABLE, TRUE); //αテスト有効　デバイス作成時はFALSE
+	pDevice->SetRenderState(D3DRS_ALPHAREF, THRESHOLD_VALUE); // 第2引数にしきい値の値を入れる
+	pDevice->SetRenderState(D3DRS_ALPHAFUNC, D3DCMP_GREATER);
 
 	pDevice->SetFVF(FVF_VERTEX2D);
 	pDevice->SetTexture(0, Texture_GetTexture(texture_index));

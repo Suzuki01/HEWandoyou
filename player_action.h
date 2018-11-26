@@ -4,6 +4,8 @@
 #include "judgement.h"
 
 #define	ATTACK_INTERVAL	(20)
+#define INDICATOR_POSX	(-550)
+#define INDICATOR_POSY	(-650)
 
 void PlayerAction_Initialize(void);
 void PlayerAction_Update(void);
@@ -17,4 +19,5 @@ bool PlayerAction_GetbIsAvoidance_Right(void);
 void PlayerAction_SetbIsAvoidance_Left(bool flag);
 void PlayerAction_SetbIsAvoidance_Right(bool flag);
 void PlayerAction_Draw();
+
 #endif // PLAYER_H_
