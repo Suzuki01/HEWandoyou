@@ -80,7 +80,7 @@ void SwordEffectCreate(float cx, float cy,float rotation,TextureIndex textureInd
 			SwordEffect[i].dy = cy;
 			SwordEffect[i].rotation = rotation;
 			SwordEffect[i].flag = true;
-			SwordEffect[i].CreateFrame = g_SwordEffectFrameCount;
+			SwordEffect[i].CreateFrame = 0;
 			SwordEffect[i].PatternCount = 0;
 			SwordEffect[i].textureIndex = textureIndex;
 			SwordEffect[i].MaxPattern = MaxPattern;
@@ -116,14 +116,24 @@ void TextureAnimation(int waitFrame) {
 			//int PatternCount = min((FrameCount / FrameSpeed), MaxPattern - 1);
 
 			//表示パタン目＝（フレームカウンター/待ちフレーム数）%　最大パタン数
-			SwordEffect[i].PatternCount = (g_SwordEffectFrameCount / waitFrame) % SwordEffect[i].MaxPattern;
+/*			SwordEffect[i].PatternCount = (g_SwordEffectFrameCount / waitFrame) % SwordEffect[i].MaxPattern;
 
 			SwordEffect[i].tw = patternWidth  * (SwordEffect[i].PatternCount % SwordEffect[i].MaxWidthPattern);
 			SwordEffect[i].th = patternHeight * (SwordEffect[i].PatternCount / SwordEffect[i].MaxWidthPattern);
 			if (waitFrame * SwordEffect[i].MaxPattern < g_SwordEffectFrameCount - SwordEffect[i].CreateFrame) {
 				SwordEffect[i].flag = false;
 				SwordEffect[i].PatternCount = 0;
+			}*/
+			SwordEffect[i].PatternCount = (SwordEffect[i].CreateFrame / waitFrame) % SwordEffect[i].MaxPattern;
+
+			SwordEffect[i].tw = patternWidth  * (SwordEffect[i].PatternCount % SwordEffect[i].MaxWidthPattern);
+			SwordEffect[i].th = patternHeight * (SwordEffect[i].PatternCount / SwordEffect[i].MaxWidthPattern);
+			if (waitFrame * SwordEffect[i].MaxPattern < SwordEffect[i].CreateFrame) {
+				SwordEffect[i].flag = false;
+				SwordEffect[i].PatternCount = 0;
+				SwordEffect[i].CreateFrame = 0;
 			}
+			SwordEffect[i].CreateFrame++;
 		}
 	}
 }
