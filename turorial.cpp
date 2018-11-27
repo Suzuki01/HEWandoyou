@@ -416,6 +416,17 @@ void Tutorial_Update(void)
 		bIsAttack = false;
 	}
 	Camera_Set_Pos(D3DXVECTOR3(Camera_PosX, Camera_PosY, Camera_PosZ));
+	
+	//タイトル画面での処理
+	if (Keyboard_IsTrigger(DIK_1)) {
+		SwordEffectCreate(SCREEN_WIDTH * 0.5 - 500, SCREEN_HEIGHT * 0.5 + 50, D3DXToRadian(45), TEXTURE_INDEX_SWORD_EFFECT, 5, 5);
+	}
+	if (Keyboard_IsTrigger(DIK_2)) {
+		SwordEffectCreate(SCREEN_WIDTH * 0.5 - 100, SCREEN_HEIGHT * 0.5, D3DXToRadian(-45), TEXTURE_INDEX_SWORD_EFFECT, 5, 5);
+	}
+	if (Keyboard_IsTrigger(DIK_3)) {
+		SwordEffectCreate(SCREEN_WIDTH * 0.5 + 300, SCREEN_HEIGHT * 0.5 + 50, D3DXToRadian(-135), TEXTURE_INDEX_SWORD_EFFECT, 5, 5);
+	}
 }
 void Tutorial_Draw(void)
 {
@@ -522,7 +533,8 @@ void Tutorial_Draw(void)
 	DebugFont_Draw(100, 50, "Wire_A_PosZ : %.2f", Wire_A_PosZ);
 	DebugFont_Draw(100, 100, "Wire_B_PosZ : %.2f", Wire_B_PosZ);
 
-	PlayerAction_Draw();/*
+
+	//タイトル画面で表示する画像
 	Sprite_Draw(TEXTURE_INDEX_TITLE_LOGO,SCREEN_WIDTH * 0.5 - 204,SCREEN_HEIGHT * 0.5 - 344,0,0,Texture_GetWidth(TEXTURE_INDEX_TITLE_LOGO), Texture_GetHeight(TEXTURE_INDEX_TITLE_LOGO),0,0,0.1,0.1,0);
 	Sprite_Draw(TEXTURE_INDEX_WOOD_BILL,SCREEN_WIDTH * 0.5 + 100,SCREEN_HEIGHT * 0.5,0,0,Texture_GetWidth(TEXTURE_INDEX_WOOD_BILL), Texture_GetHeight(TEXTURE_INDEX_WOOD_BILL),0,0,0.2,0.2,0);
 	Sprite_Draw(TEXTURE_INDEX_WOOD_BILL, SCREEN_WIDTH * 0.5 - 400, SCREEN_HEIGHT * 0.5, 0, 0, Texture_GetWidth(TEXTURE_INDEX_WOOD_BILL), Texture_GetHeight(TEXTURE_INDEX_WOOD_BILL), 0, 0, 0.2, 0.2, 0);
@@ -530,5 +542,6 @@ void Tutorial_Draw(void)
 	Sprite_Draw(TEXTURE_INDEX_TITLE_START, SCREEN_WIDTH * 0.5 - 30, SCREEN_HEIGHT * 0.5 + 60, 0, 0, Texture_GetWidth(TEXTURE_INDEX_TITLE_START), Texture_GetHeight(TEXTURE_INDEX_TITLE_START), 0, 0, 0.4, 0.4, 0);
 	Sprite_Draw(TEXTURE_INDEX_TITLE_RANKING, SCREEN_WIDTH * 0.5 - 310, SCREEN_HEIGHT * 0.5 + 50, 0, 0, Texture_GetWidth(TEXTURE_INDEX_TITLE_RANKING), Texture_GetHeight(TEXTURE_INDEX_TITLE_RANKING), 0, 0, 0.4, 0.4, 0);
 	Sprite_Draw(TEXTURE_INDEX_TITLE_OPTION, SCREEN_WIDTH * 0.5 + 190, SCREEN_HEIGHT * 0.5 + 50, 0, 0, Texture_GetWidth(TEXTURE_INDEX_TITLE_OPTION), Texture_GetHeight(TEXTURE_INDEX_TITLE_OPTION), 0, 0, 0.4, 0.4, 0);
-	*/
+	PlayerAction_Draw();
+
 }
