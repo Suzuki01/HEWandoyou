@@ -75,9 +75,9 @@ static const TextureFile g_TextureFiles[] = {
 	{ "asset/texture/attack_gage_frame.png",1500,1500 },
 	{ "asset/texture/title_logo.jpg",4093,2894},
 	{ "asset/texture/wood_bill.png",1500,1500 },
-	{ "asset/texture/start.png",176,468 },
-	{ "asset/texture/ranking.png",300,500 },
-	{ "asset/texture/option.png",300,500 },
+	{ "asset/texture/title_start.png",1500,1500 },
+	{ "asset/texture/title_ranking.png",1500,1500 },
+	{ "asset/texture/title_option.png",1500,1500 },
 };
 // 読み込みテクスチャ数
 static const int TEXTURE_FILE_COUNT = sizeof(g_TextureFiles) / sizeof(g_TextureFiles[0]);
